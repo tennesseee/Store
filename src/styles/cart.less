@@ -1,0 +1,39 @@
+@background-color: linear-gradient(
+  to right,
+  rgb(101, 197, 92),
+  rgb(238, 155, 0)
+);
+@topmargin: 5px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: @background-color;
+}
+
+.container {
+  margin: 0 auto;
+  border: 3px solid rgb(13, 19, 3);
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  &_cart {
+    margin-top: @topmargin;
+    display: flex;
+    flex-direction: column;
+  }
+  &_quantity {
+    margin-top: @topmargin;
+    display: flex;
+    flex-direction: row;
+  }
+  &_body {
+    margin-top: @topmargin;
+  }
+}
