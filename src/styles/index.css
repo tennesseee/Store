@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: rgb(70, 65, 77);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #6b6868;
+  color: #341aa8;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+h1 {
+  color: beige;
+  font-size: 25px;
+  margin-top: 8px;
+}
+
+#shop {
+  margin-left: 16px;
+}
+
+#cart-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 16px;
+}
+
+#itemMenu {
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 16px;
+  z-index: 1;
+}
+
+#itemMenu a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#itemMenu a:hover {
+  color: tomato;
+}
+
+#itemMenu input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menu {
+  position: absolute;
+  width: 100px;
+  margin: 0 0 0 -50px;
+  padding: 50px;
+  padding-top: 10px;
+  background: #adbcca;
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 20px;
+}
