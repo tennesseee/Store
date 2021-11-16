@@ -6,14 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./index.css" />
         <link rel="stylesheet" href="./from.css" />
-        <link rel="icon" href="../assets/favicon-96x96.png" />        
+        <link rel="icon" href="../assets/favicon-96x96.png" />
         <title>Shop</title>
     </head>
-    <body>        
+    <body>
         <header class="header">
-            <script src="main.js"></script>
             <h1 id="shop">Add item</h1>
-            <a href="../views/cart.html" class="cart__icon">Cart</a>
+            <a href="./cart.html" class="cart__icon">Cart</a>
         </header>
 
         <div id="itemMenu">
@@ -44,9 +43,22 @@
                     <option value="Notebooks">Notebooks</option>
                     <option value="Watches">Watches</option>
                     <option value="TV">TV</option>
-                </select>                
-                <button type="button" class="btn" onclick= "storeItem()" >Save</button>
+                </select>
+                <button type="button" class="btn" onclick="storeItem()">
+                    Save
+                </button>
+                <button type="button" class="btn" onclick="getItem()">
+                    Get
+                </button>
             </form>
         </div>
+
+        <div class="card" id="card">
+            <div id="item_image"></div>
+            <div id="item_name"></div>
+            <div id="item_desc"></div>
+            <div id="item_category"></div>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>

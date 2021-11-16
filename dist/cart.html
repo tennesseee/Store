@@ -1,18 +1,19 @@
-<head>
-  <link rel="stylesheet" href="./cart.css" />
-</head>
-<div class="container">
-  <div class="container_cart">
-    <h2>Shoping Cart</h2>
-    <h4>Info about item</h4>
-    <h4>Price $ 10.00<h4>
-    <div class="container_quantity">
-        <label for="quantity">Quantity</label>
-        <input type="number">
+<body>
+    <head>
+        <link rel="stylesheet" href="./cart.css" />
+    </head>
+    <div class="container">
+        <div class="container_cart">
+            <div class="card" id="card">
+                <div id="item_image"></div>
+                <div id="item_name"></div>
+                <div id="item_desc"></div>
+                <div id="item_category"></div>
+            </div>
+        </div>
     </div>
-    <div class="container_body">
-      <h4>Some</h4>
-      <img src="" />
-    </div>
-  </div>
-</div>
+    <button type="button" class="btn" onclick="getItem()">
+        Get items in cart
+    </button>
+    <script src="main.js"></script>
+</body>
