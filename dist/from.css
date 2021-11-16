@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#img {
+  margin-top: 10px;
+}
+#desc {
+  height: 50px;
+}
+#form {
+  width: 300px;
+  margin-left: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mainForm {
+  color: aqua;
+  margin-left: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 2px;
+  width: 200px;
+}
