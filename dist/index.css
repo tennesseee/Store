@@ -77,18 +77,11 @@ img {
   max-width: 100%;
   display: block;
 }
-.card {
-  margin-top: -20px;
+.item_container {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  height: fit-content;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 8px;
   background: #f0ffff;
-}
-.card__body {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }

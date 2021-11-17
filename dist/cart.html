@@ -1,18 +1,12 @@
-<body>
+<body onload="cartItems()">
     <head>
         <link rel="stylesheet" href="./cart.css" />
     </head>
-    <div class="container">
-        <div class="container_cart">
-            <div class="card" id="card">
-                <div id="item_image"></div>
-                <div id="item_name"></div>
-                <div id="item_desc"></div>
-                <div id="item_category"></div>
-            </div>
-        </div>
+    <h4>Your Cart</h4>
+    <div class="container" id="container">      
     </div>
-    <button type="button" class="btn" onclick="getItem()">
+    <div class="btn">
+    <button type="button" class="btn_cart">
         Get items in cart
     </button>
     <script src="main.js"></script>

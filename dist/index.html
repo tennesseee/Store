@@ -8,7 +8,7 @@
     <link rel="icon" href="../assets/favicon-96x96.png" />
     <title>Shop</title>
   </head>
-  <body>
+  <body onload="getItem()">
     <header class="header">
       <h1 id="shop">Shop</h1>
       <a href="./cart.html" class="cart__icon">Cart</a>
@@ -24,37 +24,8 @@
       </ul>
     </div>
 
-    <div class="container">
-      <div class="card">
-        <div class="cardHeader">
-          <img src="../assets/phone.jfif" class="card_image" />
-        </div>
-        <div class="card_body">
-          <span class="Category">Smartphones</span>
-          <h4>Phone 1</h4>
-          <p>Description .......</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="cardHeader">
-          <img src="../assets/phone.jfif" class="card_image" />
-        </div>
-        <div class="card_body">
-          <span class="Category">Smartphones</span>
-          <h4>Phone 2</h4>
-          <p>Description .......</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="cardHeader">
-          <img src="../assets/phone.jfif" class="card_image" />
-        </div>
-        <div class="card_body">
-          <span class="Category">Notebooks</span>
-          <h4>Tablet</h4>
-          <p>Description .......</p>
-        </div>
-      </div>
+    <div class="container" id="container">      
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
