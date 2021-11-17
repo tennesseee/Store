@@ -12,7 +12,6 @@ const storeItem = () => {
     };
 
     window.localStorage.setItem(name, JSON.stringify(item));
-    alert('Item is saved to storage');
 };
 
 const retriveData = (storage) => {
@@ -27,48 +26,55 @@ const retriveData = (storage) => {
     return values;
 };
 
-const getItem = () => {
+const getItem = (checkCategory) => {
     let data = retriveData(localStorage);
     let cardContainer = document.getElementById('container');
 
     data.forEach((item) => {
         let newItem = JSON.parse(item);
+        if (newItem.category === checkCategory || checkCategory === 'items') {
+            
 
-        let itemsCard = document.createElement('div');
-        itemsCard.className = 'item_container';
+            let itemsCard = document.createElement('div');
+            itemsCard.className = 'item_container';
 
-        let itemsName = document.createElement('div');
-        itemsName.className = 'item_name';
-        itemsName.textContent = newItem.name;
-        itemsCard.appendChild(itemsName);
+            let itemsName = document.createElement('div');
+            itemsName.className = 'item_name';
+            itemsName.textContent = newItem.name;
+            itemsCard.appendChild(itemsName);
 
-        let itemsImage = document.createElement('div');
-        itemsImage.className = 'item_image';
-        itemsImage.textContent = newItem.image;
-        itemsCard.appendChild(itemsImage);
+            let itemsImage = document.createElement('div');
+            itemsImage.className = 'item_image';
+            let imageTag = document.createElement('img');
+            imageTag.className = 'item_image';
+            let imagePath = newItem.image.split('\\').pop();
+            imageTag.src = imagePath;
+            itemsImage.appendChild(imageTag);
+            itemsCard.appendChild(itemsImage);
 
-        let itemsDesc = document.createElement('div');
-        itemsDesc.className = 'item_desc';
-        itemsDesc.textContent = newItem.description;
-        itemsCard.appendChild(itemsDesc);
+            let itemsDesc = document.createElement('div');
+            itemsDesc.className = 'item_desc';
+            itemsDesc.textContent = newItem.description;
+            itemsCard.appendChild(itemsDesc);
 
-        let itemsCategory = document.createElement('div');
-        itemsCategory.className = 'item_category';
-        itemsCategory.textContent = newItem.category;
-        itemsCard.appendChild(itemsCategory);
+            let itemsCategory = document.createElement('div');
+            itemsCategory.className = 'item_category';
+            itemsCategory.textContent = newItem.category;
+            itemsCard.appendChild(itemsCategory);
 
-        let divForButton = document.createElement('div');
-        divForButton.className = 'cart_btn_div';
-        let cartButton = document.createElement('button');
-        cartButton.className = 'cart_btn';
+            let divForButton = document.createElement('div');
+            divForButton.className = 'cart_btn_div';
+            let cartButton = document.createElement('button');
+            cartButton.className = 'cart_btn';
 
-        cartButton.addEventListener('click', () => addToCart(item));
-        cartButton.innerText = 'add to cart';
+            cartButton.addEventListener('click', () => addToCart(item));
+            cartButton.innerText = 'add to cart';
 
-        divForButton.appendChild(cartButton);
-        itemsCard.appendChild(divForButton);
+            divForButton.appendChild(cartButton);
+            itemsCard.appendChild(divForButton);
 
-        cardContainer.appendChild(itemsCard);
+            cardContainer.appendChild(itemsCard);
+        }
     });
 };
 
@@ -102,7 +108,11 @@ const cartItems = () => {
 
         let itemsImage = document.createElement('div');
         itemsImage.className = 'item_image';
-        itemsImage.textContent = newItem.image;
+        let imageTag = document.createElement('img');
+        imageTag.className = 'item_image';
+        let imagePath = newItem.image.split('\\').pop();
+        imageTag.src = imagePath;
+        itemsImage.appendChild(imageTag);
         itemsCard.appendChild(itemsImage);
 
         let itemsDesc = document.createElement('div');
@@ -122,11 +132,11 @@ const cartItems = () => {
 // const setListener = document.getElementsByClassName('btn')[0];
 // setListener.addEventListener('click', storeItem, false);
 
-const getListener = document.getElementsByClassName('btn_get');
-for (var i in getListener) {
-    getListener[i].onclick = function () {
-        getItem();
-    };
-}
+// const getListener = document.getElementsByClassName('btn_get');
+// for (var i in getListener) {
+//     getListener[i].onclick = function () {
+//         getItem();
+//     };
+// }
 
 module.exports = { storeItem, getItem, cartItems };

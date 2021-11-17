@@ -12,15 +12,17 @@ body {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
   width: 300px;
 }
-.btn_get {
+.item_container {
   display: flex;
-  margin-left: 20px;
-  margin-top: -20px;
-  color: aqua;
-  background-color: cadetblue;
+  flex-direction: column;
+  justify-content: right;
+  width: 300px;
+}
+.item_image {
+  width: 300px;
 }
 h4 {
   display: flex;

@@ -1,42 +1,44 @@
 //compress: false , out : ../../dist/cart.css
 
 @background-color: linear-gradient(
-  to right,
-  rgb(101, 197, 92),
-  rgb(238, 155, 0)
+    to right,
+    rgb(101, 197, 92),
+    rgb(238, 155, 0)
 );
 @topmargin: 5px;
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background: @background-color;
+    background: @background-color;
 }
 
 .container {
-  margin: 0 auto;
-  border: 3px solid rgb(13, 19, 3);
-  border-radius: 10px;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 300px;
-  
+    margin: 0 auto;
+    border: 3px solid rgb(13, 19, 3);
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 300px;
 }
 
-.btn_get {  
-  display: flex;
-  margin-left: 20px;
-  margin-top: -20px;
-  color: aqua;
-  background-color: cadetblue;
+.item_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 300px;
+}
+
+.item_image {
+  width: 300px;
 }
 
 h4 {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
