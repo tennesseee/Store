@@ -67,6 +67,7 @@ h1 {
   font-size: 20px;
 }
 .container {
+  margin-left: 130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -89,4 +90,14 @@ h1 {
 }
 .item_container > .item_image {
   order: 1;
+}
+.cart_btn {
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  background-color: #647a64;
+  cursor: pointer;
+}
+.cart_btn:hover {
+  background-color: greenyellow;
 }

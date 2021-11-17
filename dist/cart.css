@@ -7,8 +7,6 @@ body {
 }
 .container {
   margin: 0 auto;
-  border: 3px solid #0d1303;
-  border-radius: 10px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +14,8 @@ body {
   width: 300px;
 }
 .item_container {
+  border: 3px solid #0d1303;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: right;
@@ -23,6 +23,9 @@ body {
 }
 .item_image {
   width: 300px;
+}
+.item_container > .item_image {
+  order: 1;
 }
 h4 {
   display: flex;

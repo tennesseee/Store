@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { storeItem } = require('../child');
+const { storeItem } = require('../storage');
 
 describe('storeItem test', () => {
     test('should store items to storage', () => {

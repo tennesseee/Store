@@ -17,9 +17,7 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    border: 3px solid rgb(13, 19, 3);
-    border-radius: 10px;
+    margin: 0 auto;    
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +26,8 @@ body {
 }
 
 .item_container {
+    border: 3px solid rgb(13, 19, 3);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: right;
@@ -36,6 +36,10 @@ body {
 
 .item_image {
   width: 300px;
+}
+
+.item_container > .item_image {
+  order: 1;
 }
 
 h4 {

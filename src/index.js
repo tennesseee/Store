@@ -1,4 +1,5 @@
-const { storeItem, getItem, cartItems } = require("./child");
+const { storeItem, getItem } = require('./storage');
+const { cartItems } = require('./cart');
 
 window.storeItem = storeItem;
 window.getItem = getItem;
