@@ -5,7 +5,7 @@ type Item = {
     description: string,
     category: string,
     image: string
-}
+};
 
 const storeItem = () => {
     let name: string = (<HTMLInputElement>document.getElementById('name')).value;

@@ -3,7 +3,7 @@ type Item = {
     description: string,
     category: string,
     image: string
-}
+};
 
 const addToCart = (item: string) => {
     let parseItem: Item = JSON.parse(item);
