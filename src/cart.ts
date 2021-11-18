@@ -1,7 +1,14 @@
-const addToCart = (item) => {
-    let parseItem = JSON.parse(item);
+type Item = {
+    name: string,
+    description: string,
+    category: string,
+    image: string
+}
 
-    let itemObj = {
+const addToCart = (item: string) => {
+    let parseItem: Item = JSON.parse(item);
+
+    let itemObj: Item = {
         name: parseItem.name,
         description: parseItem.description,
         category: parseItem.category,
@@ -12,20 +19,20 @@ const addToCart = (item) => {
 };
 
 const cartItems = () => {
-    let cartData = retriveData(sessionStorage);
-    cardContainer = document.getElementById('container');
+    let cartData: string[] = retriveData(sessionStorage);
+    let cardContainer: HTMLElement = document.getElementById('container');
 
     cartData.forEach((item) => {
-        let newItem = JSON.parse(item);
-        let itemsCard = document.createElement('div');
+        let newItem: Item = JSON.parse(item);
+        let itemsCard: HTMLElement = document.createElement('div');
         itemsCard.className = 'item_container';
 
-        let itemsName = document.createElement('div');
-        let itemsImage = document.createElement('div');
-        let imageTag = document.createElement('img');
-        let imagePath = newItem.image.split('\\').pop();
-        let itemsDesc = document.createElement('div');
-        let itemsCategory = document.createElement('div');
+        let itemsName: HTMLElement = document.createElement('div');
+        let itemsImage: HTMLElement = document.createElement('div');
+        let imageTag: HTMLImageElement = document.createElement('img');
+        let imagePath: string = newItem.image.split('\\').pop();
+        let itemsDesc: HTMLElement = document.createElement('div');
+        let itemsCategory: HTMLElement = document.createElement('div');
 
         itemsName.className = 'item_name';
         itemsName.textContent = newItem.name;
@@ -49,7 +56,7 @@ const cartItems = () => {
     });
 };
 
-const retriveData = (storage) => {
+const retriveData = (storage: Storage) => {
     let values = [],
         keys = Object.keys(storage),
         i = keys.length;
@@ -61,4 +68,4 @@ const retriveData = (storage) => {
     return values;
 };
 
-module.exports = { addToCart, cartItems };
+export { addToCart, cartItems };
