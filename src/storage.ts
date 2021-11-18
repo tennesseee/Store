@@ -35,7 +35,7 @@ const retriveData = (storage: Storage) => {
     return values;
 };
 
-const getItem = (checkCategory: string) => {
+const getItemsFromStorage = (checkCategory: string) => {
     let data: Object[] = retriveData(localStorage);
     let cardContainer: HTMLElement = document.getElementById('container');
 
@@ -85,4 +85,4 @@ const getItem = (checkCategory: string) => {
     });
 };
 
-export {storeItem, getItem, retriveData };
+export {storeItem, getItemsFromStorage, retriveData };

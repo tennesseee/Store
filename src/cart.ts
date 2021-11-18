@@ -1,3 +1,6 @@
+import { retriveData } from './retriveData';
+import { getItemsFromStorage } from './storage';
+
 type Item = {
     name: string,
     description: string,
@@ -19,10 +22,10 @@ const addToCart = (item: string) => {
 };
 
 const cartItems = () => {
-    let cartData: string[] = retriveData(sessionStorage);
+    let cartData: Object[] = retriveData(sessionStorage);
     let cardContainer: HTMLElement = document.getElementById('container');
 
-    cartData.forEach((item) => {
+    cartData.forEach((item: any) => {
         let newItem: Item = JSON.parse(item);
         let itemsCard: HTMLElement = document.createElement('div');
         itemsCard.className = 'item_container';
@@ -56,16 +59,6 @@ const cartItems = () => {
     });
 };
 
-const retriveData = (storage: Storage) => {
-    let values = [],
-        keys = Object.keys(storage),
-        i = keys.length;
 
-    while (i--) {
-        values.push(storage.getItem(keys[i]));
-    }
-
-    return values;
-};
 
 export { addToCart, cartItems };
