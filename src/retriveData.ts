@@ -1,12 +1,5 @@
-type Item = {
-    name: string,
-    description: string,
-    category: string,
-    image: string
-};
-
 const retriveData = (storage: Storage) => {
-    let values: Item    [],
+    let values: Object[],
         keys = Object.keys(storage),
         i = keys.length;
 

@@ -1,4 +1,5 @@
-import { addToCart, cartItems } from './cart';
+import { addToCart } from './cart';
+import { retriveData } from './retriveData';
 
 type Item = {
     name: string,
@@ -21,18 +22,6 @@ const storeItem = () => {
     };
 
     window.localStorage.setItem(name, JSON.stringify(item));
-};
-
-const retriveData = (storage: Storage) => {
-    let values: Object[] = [],
-        keys = Object.keys(storage),
-        i = keys.length;
-
-    while (i--) {
-        values.push(storage.getItem(keys[i]));
-    }
-
-    return values;
 };
 
 const getItemsFromStorage = (checkCategory: string) => {
